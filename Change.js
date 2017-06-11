@@ -1,34 +1,67 @@
 import React, { Component } from 'react';
-import { ScrollView, Image, Linking, StyleSheet, View } from 'react-native';
-import { List, ListItem, Button, Icon, Text, Tile } from 'react-native-elements';
+import { ScrollView, View, Image, Text } from 'react-native';
+import { Tile, List, ListItem, SearchBar } from 'react-native-elements';
 
- const Change = () => {
-   return (
-     <ScrollView>
-       <Image
-         style={{ height: 330, width: 375 }}
-         source={require('../assets/pic3.png')}
-       />
-       <List>
-         <ListItem
-           style={{ color: '#334559', backgroundColor: '#ececec', bottom: 2 }}
-           title='Album'
-         />
-       </List>
-       <List>
-         <ListItem
-           style={{ color: '#334559', backgroundColor: '#ececec', bottom: 2 }}
-           title="Use Cemera"
-         />
-       </List>
-       <List>
-         <ListItem
-           style={{ color: '#334559', backgroundColor: '#ececec', bottom: 2 }}
-           title="Delete"
-         />
-       </List>
-     </ScrollView>
+class Change extends Component {
+  render() {
+    const { block1, block2, one, heart } = styles;
+    return (
+      <ScrollView style={{ backgroundColor: '#ffffff' }}>
+        <View style={{ height: 348, width: 375 }}>
+          <Image
+            style={{ height: 330, width: 375 }}
+            source={require('../assets/pic3.png')}
+          />
+        </View>
+        <View style={{ height: 45, width: 375 }}>
+          <View style={block2}>
+            <Text style={one}>Album</Text>
+            <Image style={heart}
+              source={require('../assets/to.png')} />
+          </View>
+        </View>
+        <View style={{ height: 45, width: 375 }}>
+          <View style={block2}>
+            <Text style={one}>Camera</Text>
+            <Image style={heart}
+              source={require('../assets/to.png')} />
+          </View>
+        </View>
+        <View style={{ height: 45, width: 375 }}>
+          <View style={block2}>
+            <Text style={one}>Delete</Text>
+            <Image style={heart}
+              source={require('../assets/to.png')} />
+          </View>
+        </View>
+      </ScrollView>
     );
-  };
-
+  }
+}
+const styles =
+  {
+    block1: {
+      height: 45,
+    },
+    block2: {
+      top: 10,
+      backgroundColor: '#ececec',
+      height: 43,
+    },
+    one: {
+      left: 15,
+      top: 15,
+      width: 150,
+      color: '#334559',
+      fontSize: 12,
+      fontWeight: 'bold'
+    },
+    heart: {
+      left: 335,
+      bottom: 5,
+      height: 24,
+      width: 24,
+      alignItems: 'flex-end'
+    },
+  }
 export default Change;
