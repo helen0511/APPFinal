@@ -5,7 +5,7 @@ details_de / details_voa / details_br /
 Router.js
 
   Details_de: {
-    screen: Details_voa,
+    screen: Details_de,
     navigationOptions: {
       header: () => ({
         tintColor:'#ffffff',
