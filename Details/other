@@ -1,0 +1,58 @@
+DAILY ENGLISH / VOA ENGLISH / BR CUNCIL /
+details_de / details_voa / details_br / 
+
+
+Router.js
+
+  Details_de: {
+    screen: Details_voa,
+    navigationOptions: {
+      header: () => ({
+        tintColor:'#ffffff',
+           style:{ backgroundColor: '#334559'},
+            titleStyle: {
+        color: '#ffffff'
+    },
+        title: 'DAILY ENGLISH',
+      })
+    },
+  },
+  Details_voa: {
+    screen: Details_voa,
+    navigationOptions: {
+      header: () => ({
+        tintColor:'#ffffff',
+           style:{ backgroundColor: '#334559'},
+            titleStyle: {
+        color: '#ffffff'
+    },
+        title: 'VOA ENGLISH',
+      })
+    },
+  },
+  Details_br: {
+    screen: Details_br,
+    navigationOptions: {
+      header: () => ({
+        tintColor:'#ffffff',
+           style:{ backgroundColor: '#334559'},
+            titleStyle: {
+        color: '#ffffff'
+    },
+        title: 'BR CUNCIL',
+      })
+    },
+  },
+  
+  
+  Channel.js
+  
+  goToPageEight = () => {
+    this.props.navigation.navigate('Details_de');
+  };
+  goToPageNine = () => {
+    this.props.navigation.navigate('Details_voa');
+  };
+  goToPageTen = () => {
+    this.props.navigation.navigate('Details_br');
+  };
