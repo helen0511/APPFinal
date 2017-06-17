@@ -4,6 +4,10 @@ details_de / details_voa / details_br /
 
 Router.js
 
+import Details_de from './components/Details_de';
+import details_voa from './components/details_voa';
+import details_br from './components/details_br';
+
   Details_de: {
     screen: Details_de,
     navigationOptions: {
