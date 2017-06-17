@@ -60,3 +60,7 @@ import details_br from './components/details_br';
   goToPageTen = () => {
     this.props.navigation.navigate('Details_br');
   };
+
+onPress={() => this.goToPageEight()}
+onPress={() => this.goToPageNine()}
+onPress={() => this.goToPageTen()}
